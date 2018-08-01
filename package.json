@@ -1,0 +1,26 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "my blog",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lewiscutey/blog.git"
+  },
+  "keywords": [
+    "vuepress"
+  ],
+  "author": "lewis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lewiscutey/blog/issues"
+  },
+  "homepage": "https://github.com/lewiscutey/blog#readme",
+  "devDependencies": {
+    "vuepress": "^0.13.0"
+  }
+}
