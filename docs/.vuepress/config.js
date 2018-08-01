@@ -2,45 +2,47 @@ module.exports = {
     title: 'blog', 
     description: `lewis's blog`,
     head: [
-        ['link', { rel: 'apple-touch-icon', href: '/img/logo.ico' }],
-        ['link', { rel: 'manifest', href: '/manifest.json' }],
+        ['link', { rel: 'icon', href: `/logo.png` }]
     ],
     base: '/blog/',
+    repo: 'https://github.com/lewiscutey/blog',
     dest: './docs/.vuepress/dist',
+    serviceWorker: true,
     themeConfig: {
-    // 导航配置
         nav: [
-        // text为导航栏显示文字，link为路径，即文件夹名字，注意不要丢了名字前后的'/'
-        {text: 'Home', link: '/'},
-        {text: 'About', link: '/about/'},
-        {
-            text: 'Study', 
-            items: [
-                { text: 'JavaScript', link: '/javascript/' },
-                { text: 'H5', link: '/h5/' },
-                { text: 'CSS', link: '/css/' }
-            ]
-        },
-        {text: 'CSDN', link: 'http://www.cnblogs.com/lewiscutey/'},
-        {text: 'Github', link: 'https://github.com/lewiscutey'}
+            {text: 'Home', link: '/'},
+            {text: 'About', link: '/about/'},
+            {
+                text: 'Study', 
+                items: [
+                    { text: 'JavaScript', link: '/javascript/' },
+                    { text: 'H5', link: '/h5/' },
+                    { text: 'CSS', link: '/css/' }
+                ]
+            },
+            {text: 'CSDN', link: 'http://www.cnblogs.com/lewiscutey/'},
+            {text: 'Github', link: 'https://github.com/lewiscutey'}
         ],
-        sidebar: {
-            '/javascript/': [
-                '',
-                ['201709', '201709'],
-                ['201710', '201710'],
-            ],
-            '/h5/': [
-                '',
-                ['axios', '1.axios'],
-                ['document', '2.document'],
-            ],
-            '/css/': [
-                '',
-                ['axios', '1.axios'],
-                ['document', '2.document'],
-            ]
-        },
+        sidebar: 'auto',
         sidebarDepth: 2,
-    }
+    },
+    markdown: {
+        anchor: {
+            permalink: false,
+            permalinkBefore: true,
+            permalinkSymbol: '#'
+        },
+        toc: {
+            includeLevel: [1, 2]
+        },
+        config: md => {
+            // 使用更多 markdown-it 插件！
+            // md.use(require('markdown-it-xxx'))
+        }
+    },
+    postcss: {
+        plugins: [require('autoprefixer')]
+    },
+    evergreen: true
 }
+

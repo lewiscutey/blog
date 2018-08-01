@@ -23,5 +23,8 @@
   "homepage": "https://github.com/lewiscutey/blog#readme",
   "devDependencies": {
     "vuepress": "^0.13.0"
+  },
+  "dependencies": {
+    "vuepress-theme-yubisaki": "^1.1.9"
   }
 }
