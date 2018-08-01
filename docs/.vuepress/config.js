@@ -8,6 +8,7 @@ module.exports = {
     repo: 'https://github.com/lewiscutey/blog',
     dest: './docs/.vuepress/dist',
     serviceWorker: true,
+    theme: 'yubisaki',
     themeConfig: {
         nav: [
             {text: 'Home', link: '/'},
