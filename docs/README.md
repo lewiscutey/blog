@@ -1,14 +1,17 @@
 ---
-home: true
+heroText: lewis
+activity: true
+hidden: true
+tagline: ''
 heroImage: /img/logo.png
-actionText: Get Started →
-actionLink: /blog/index.html
+actionText: 了解一下 → 
+actionLink: /blog/
 features:
-- title: Simplicity First
-  details: Minimal setup with markdown-centered project structure helps you focus on writing.
-- title: Vue-Powered
-  details: Enjoy the dev experience of Vue + webpack, use Vue components in markdown, and develop custom themes with Vue.
-- title: Performant
-  details: VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.
-footer: Copyright © 2018-Lewis
+  - title: 这是什么
+    details: 一个基于 vuepress 的博客主题, 它基于 vuepress 提供的默认主题
+  - title: 有哪些特点
+    details: 提供文章列表, 文章分页, 文章详情, github card, 自定义活动页 layout 等等功能
+  - title: TODO
+    details: 标签云, TAG ARCHIVE, 一些脚本, 一些 开箱即用的layout
+footer: Copyright  2018©Lewis
 ---

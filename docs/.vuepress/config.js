@@ -1,49 +1,45 @@
 module.exports = {
+    theme: 'yubisaki',
     title: 'blog', 
     description: `lewis's blog`,
     head: [
-        ['link', { rel: 'icon', href: `/logo.png` }]
+        ['link', { rel: 'icon', href: `/favicon.ico` }]
     ],
     base: '/blog/',
     repo: 'https://github.com/lewiscutey/blog',
     dest: './docs/.vuepress/dist',
+    ga: '',
     serviceWorker: true,
-    theme: 'yubisaki',
+    evergreen: true,
     themeConfig: {
+        background: `/img/`,
+        github: 'lewiscutey',
+        logo: '/img/logo.png',
+        accentColor: '#ac3e40',
+        per_page: 6,
+        date_format: 'yyyy-MM-dd HH:mm:ss',
         nav: [
-            {text: 'Home', link: '/'},
+            {text: 'Home', link: '/blog/'},
             {text: 'About', link: '/about/'},
-            {
-                text: 'Study', 
-                items: [
-                    { text: 'JavaScript', link: '/javascript/' },
-                    { text: 'H5', link: '/h5/' },
-                    { text: 'CSS', link: '/css/' }
-                ]
-            },
             {text: 'CSDN', link: 'http://www.cnblogs.com/lewiscutey/'},
             {text: 'Github', link: 'https://github.com/lewiscutey'}
-        ],
-        sidebar: 'auto',
-        sidebarDepth: 2,
+        ]
     },
     markdown: {
         anchor: {
-            permalink: false,
-            permalinkBefore: true,
-            permalinkSymbol: '#'
+            permalink: true
         },
         toc: {
             includeLevel: [1, 2]
         },
         config: md => {
             // 使用更多 markdown-it 插件！
-            // md.use(require('markdown-it-xxx'))
+            md.use(require('markdown-it-task-lists'))
+            .use(require('markdown-it-imsize'), { autofill: true })
         }
     },
     postcss: {
         plugins: [require('autoprefixer')]
     },
-    evergreen: true
 }
 
