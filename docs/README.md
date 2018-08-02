@@ -1,11 +1,11 @@
 ---
-heroText: lewis
+#heroText: lewis
 activity: true
 hidden: true
-tagline: ''
+tagline: '如果说人生是一场旅行，而我是这场旅行的主人!'
 heroImage: /img/logo.png
-actionText: 了解一下 → 
-actionLink: /blog/
+#actionText: more → 
+#actionLink: /blog/
 features:
   - title: 这是什么
     details: 一个基于 vuepress 的博客主题, 它基于 vuepress 提供的默认主题
