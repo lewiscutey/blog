@@ -22,10 +22,8 @@
     "url": "https://github.com/lewiscutey/blog/issues"
   },
   "homepage": "https://github.com/lewiscutey/blog#readme",
-  "devDependencies": {
-    "vuepress": "^0.13.0"
-  },
   "dependencies": {
+    "vuepress": "^0.13.1",
     "markdown-it-imsize": "^2.0.1",
     "markdown-it-task-lists": "^2.1.1",
     "vuepress-theme-yubisaki": "^1.1.9"

@@ -1,6 +1,6 @@
 module.exports = {
     theme: 'yubisaki',
-    title: 'blog', 
+    title: 'HOME', 
     description: `lewis's blog`,
     head: [
         ['link', { rel: 'icon', href: `/favicon.ico` }]
@@ -19,7 +19,7 @@ module.exports = {
         per_page: 6,
         date_format: 'yyyy-MM-dd HH:mm:ss',
         nav: [
-            {text: 'Home', link: '/blog/'},
+            {text: 'Blog', link: '/blog/'},
             {text: 'About', link: '/about/'},
             {text: 'CSDN', link: 'http://www.cnblogs.com/lewiscutey/'},
             {text: 'Github', link: 'https://github.com/lewiscutey'}
