@@ -7,7 +7,7 @@
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "deploy": "bash deploy.sh",
-    "new blog": "yubisaki post -p docs/blog --page index.md"
+    "new": "yubisaki post -p docs/blog --page"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,6 @@
     "vuepress": "^0.13.1",
     "markdown-it-imsize": "^2.0.1",
     "markdown-it-task-lists": "^2.1.1",
-    "vuepress-theme-yubisaki": "^1.1.9"
+    "vuepress-theme-yubisaki": "^2.0.2"
   }
 }

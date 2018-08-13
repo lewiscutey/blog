@@ -18,11 +18,13 @@ module.exports = {
         accentColor: '#ac3e40',
         per_page: 6,
         date_format: 'yyyy-MM-dd HH:mm:ss',
+        tags: true,
         nav: [
-            {text: 'Blog', link: '/blog/'},
+            {text: 'Blog', link: '/blog/', root: true},
             {text: 'About', link: '/about/'},
+            {text: 'Tags', link: '/tags/', tags: true},
             {text: 'CSDN', link: 'http://www.cnblogs.com/lewiscutey/'},
-            {text: 'Github', link: 'https://github.com/lewiscutey'}
+            {text: 'Github', link: 'https://github.com/lewiscutey'},
         ]
     },
     markdown: {
@@ -42,4 +44,3 @@ module.exports = {
         plugins: [require('autoprefixer')]
     },
 }
-
