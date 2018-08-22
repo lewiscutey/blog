@@ -19,6 +19,14 @@ module.exports = {
         per_page: 6,
         date_format: 'yyyy-MM-dd HH:mm:ss',
         tags: true,
+        comment: {
+            clientID: '4779161d8d0e96d18948',
+            clientSecret: '2a8c36f4b3eda7e692224be513730f94443085dd',
+            repo: 'blog',
+            owner: 'lewiscutey',
+            admin: 'lewiscutey',
+            distractionFreeMode: false
+        },
         nav: [
             {text: 'Blog', link: '/blog/', root: true},
             {text: 'About', link: '/about/'},

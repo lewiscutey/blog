@@ -23,9 +23,9 @@
   },
   "homepage": "https://github.com/lewiscutey/blog#readme",
   "dependencies": {
-    "vuepress": "^0.13.1",
     "markdown-it-imsize": "^2.0.1",
     "markdown-it-task-lists": "^2.1.1",
-    "vuepress-theme-yubisaki": "^2.0.2"
+    "vuepress": "^0.14.2",
+    "vuepress-theme-yubisaki": "^3.0.1"
   }
 }
