@@ -1,6 +1,6 @@
 ---
 title: vuepress折腾记
-date: '2018-08-05 17:31:04'
+date: '2018/08/05 17:31:04'
 tag: ['vuepress-init', 'vuepress-theme-yubisaki', 'blog']
 meta:
   -
@@ -119,7 +119,7 @@ npm run dev
 ```
 > 5. 执行命令**npm run new**会创建一个md文档，需安装[yubisaki-shell](https://github.com/Bloss/yubisaki-shell)
 ```
-npm run new -- <blog name>.md
+npm run new <blog name>.md
 ```
 > 2. 执行命令**npm run deploy**一键部署在你的服务上，需提前设置好deploy.sh中自己的服务提交地址，默认是GitHub中的gh-pages分支
 ```
