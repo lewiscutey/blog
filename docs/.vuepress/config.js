@@ -12,7 +12,7 @@ module.exports = {
     serviceWorker: true,
     evergreen: true,
     themeConfig: {
-        background: `/img/`,
+        background: `#fff`,
         github: 'lewiscutey',
         logo: '/img/logo.png',
         accentColor: '#ac3e40',
