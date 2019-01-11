@@ -15,6 +15,7 @@ module.exports = {
         background: `#fff`,
         github: 'lewiscutey',
         logo: '/img/logo.png',
+        footer: '如果说人生是一场旅行，而我是这场旅行的主人!',
         accentColor: '#ac3e40',
         per_page: 6,
         date_format: 'yyyy-MM-dd HH:mm:ss',

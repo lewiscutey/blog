@@ -1,7 +1,7 @@
 ---
 title: github使用笔记
 date: '2018/08/17 21:48:53'
-tag: ['github', 'note', 'git']
+tag: ['github', 'git']
 meta:
   -
     name: description
@@ -10,8 +10,10 @@ meta:
     name: keywords
     content: github,git
 ---
+GitHub常用的一些命令，方便随时查看。
+<!-- more -->
 ## 上传打包文件到GitHub pages流程:
-```
+``` javascript
 npm run build
 cd dist
 git init
@@ -25,7 +27,7 @@ git push -f git@github.com:lewiscutey/XX.git master:gh-pages
 
 ## PR流程:
 
-```
+``` javascript
 fork 到自己的仓库
 
 git clone 到本地

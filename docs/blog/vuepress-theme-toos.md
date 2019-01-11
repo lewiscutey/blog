@@ -4,7 +4,7 @@ date: '2018/08/05 17:31:04'
 tag: ['vuepress-init', 'vuepress-theme-yubisaki', 'blog']
 meta:
   -
-    name: 介绍vuepress制作成功博客的细节
+    name: 介绍vuepress制作博客的细节
     content: null
   -
     name: keywords
@@ -23,7 +23,7 @@ meta:
 ## 2. 开始制作博客
 最好是按官方文档自己来一遍流程，虽然看似就像1、2、3一样简单，但是真正实践起来并没有那么容易，我做的时候一堆报错，死活就是出不来blog目录下的内容，其实只看文档表象根本不知道目录结构该是怎样的，还是会有很多盲点，所以看完文档做出来还是有一点难度的，我贴一下我的目录结构和主要配置文件，看完就会明朗很多。
 ### 基本配置config.js
-```
+``` javascript
 module.exports = {
 	theme: 'yubisaki',
 	title: 'HOME', 
@@ -70,7 +70,7 @@ module.exports = {
 }
 ```
 ### 目录结构
-```
+``` javascript
 docs
 ├─ README.md          // 博客首页配置
 ├─ index.md           // 必须是空的，用来生成目录结构
@@ -102,27 +102,27 @@ vuepress-theme-yubisak具体使用情况可以看[这篇文章](https://wuwaki.m
 :::
 ### 如何使用？
 > 1. 全局安装**vuepress-init**
-```
+``` javascript
 npm i vuepress-init -g
 ```
 > 2. 执行命令**vuepress init**创建项目，也可以执行**vuepress**查看命令
-```
+``` javascript
 vuepress init
 ```
 > 3. 进入刚创建的项目（不创建新的默认是当前目录），并安装所需依赖
-```
+``` javascript
 cd <your project> && npm install
 ```
 > 4. 执行命令**npm run dev**，会在本地起一个网络服务，可以直接查看效果
-```
+``` javascript
 npm run dev
 ```
 > 5. 执行命令**npm run new**会创建一个md文档，需安装[yubisaki-shell](https://github.com/Bloss/yubisaki-shell)
-```
+``` javascript
 npm run new <blog name>.md
 ```
-> 2. 执行命令**npm run deploy**一键部署在你的服务上，需提前设置好deploy.sh中自己的服务提交地址，默认是GitHub中的gh-pages分支
-```
+> 6. 执行命令**npm run deploy**一键部署在你的服务上，需提前设置好deploy.sh中自己的服务提交地址，默认是GitHub中的gh-pages分支
+``` javascript
 npm run deploy
 ```
 ## 5. 最终效果
