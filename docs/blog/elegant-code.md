@@ -1,5 +1,5 @@
 ---
-title: 如何写出优雅的js代码
+title: 如何写出优雅的JS代码
 date: '2018/08/29 21:00:24'
 tag: code
 meta:

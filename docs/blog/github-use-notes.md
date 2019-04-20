@@ -35,6 +35,9 @@ git clone 到本地
 上游建立连接
 git remote add upstream 开源项目地址
 
+始终保持和原仓库代码最新时需要多以下两步操作
+git fetch upstream  git merge upstream
+
 创建开发分支 (非必须)
 git checkout -b dev
 
