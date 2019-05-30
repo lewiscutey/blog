@@ -43,6 +43,9 @@ meta:
 * [深入探究 Function & Object 鸡生蛋问题](https://mp.weixin.qq.com/s/UsgQNWwH7_q8vGQbtSsiTg)
 
 ## 【进阶6期】 高阶函数
+* [JavaScript 高阶函数浅析](https://mp.weixin.qq.com/s/_CForjghNYMb7Zj781JL4Q)
+* [深入高阶函数应用之柯里化](https://mp.weixin.qq.com/s/hSK7KJ6RsC_zaCL_06huGg)
+* [深入浅出节流函数 throttle](https://mp.weixin.qq.com/s/1U8gsj4kv00GrMDWRw7Y2Q)
 ## 【进阶7期】 事件机制
 ## 【进阶8期】 Event Loop原理
 ## 【进阶9期】 Promise原理
@@ -85,5 +88,8 @@ meta:
 
 ## 性能优化
 * [Vue性能优化：如何实现延迟加载和代码拆分？](https://mp.weixin.qq.com/s/-m3F9SXxSuMAiy3WDqQmPA)
+
+## 前端自检清单
+* [一名【合格】前端工程师的自检清单](https://mp.weixin.qq.com/s/SJVKl-cTpqIz1vcUgNy_Cw)
 
 前端工程化： 规范化，模块化，组件化，自动化。
