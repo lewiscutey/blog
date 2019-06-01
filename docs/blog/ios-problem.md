@@ -1,6 +1,7 @@
 ---
 title: IOS的一些问题
 date: '2019/05/09 15:59:15'
+type: post
 tag: iOS
 meta:
   -

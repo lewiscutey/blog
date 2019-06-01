@@ -1,6 +1,7 @@
 ---
 title: github使用笔记
 date: '2018/08/17 21:48:53'
+type: post
 tag: ['github', 'git']
 meta:
   -

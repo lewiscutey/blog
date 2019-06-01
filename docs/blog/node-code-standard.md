@@ -1,6 +1,7 @@
 ---
 title: Node编码规范
 date: "2018/11/08 22:08:46"
+type: post
 tag: ["node", "code"]
 meta:
   - name: description

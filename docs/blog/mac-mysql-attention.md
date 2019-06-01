@@ -1,6 +1,7 @@
 ---
 title: Mac使用mysql注意事项
 date: '2018/11/26 21:25:09'
+type: post
 tag: ['Mac', 'mysql']
 meta:
   -

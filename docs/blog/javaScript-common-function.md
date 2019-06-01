@@ -1,6 +1,7 @@
 ---
 title: JavaScript常用的函数
 date: "2019/02/26 15:16:36"
+type: post
 tag: [JavaScript, function]
 meta:
   - name: description

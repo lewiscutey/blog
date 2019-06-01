@@ -1,6 +1,7 @@
 ---
 title: javaScript常见的错误类型
 date: "2018/10/16 16:56:27"
+type: post
 tag: [JavaScript,error]
 meta:
   - name: description

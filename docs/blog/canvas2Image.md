@@ -1,6 +1,7 @@
 ---
 title: H5页面中长按保存图片详解
 date: '2018/09/27 21:12:03'
+type: post
 tag: html2canvas
 meta:
   -

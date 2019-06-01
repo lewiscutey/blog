@@ -1,6 +1,7 @@
 ---
 title: webpcak爬坑总结
 date: '2019/04/24 19:53:40'
+type: post
 tag: webpack
 meta:
   -

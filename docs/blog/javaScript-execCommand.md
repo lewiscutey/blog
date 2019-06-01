@@ -1,6 +1,7 @@
 ---
 title: 浏览器里点击复制到剪贴板的方法
 date: "2018/10/18 15:17:53"
+type: post
 tag: [JavaScript,execCommand]
 meta:
   - name: description

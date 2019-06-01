@@ -1,6 +1,7 @@
 ---
 title: H5移动端IOS/Android兼容性总结，持续更新中…
 date: "2018/10/23 18:53:57"
+type: post
 tag: [H5, IOS, Android]
 meta:
   - name: description

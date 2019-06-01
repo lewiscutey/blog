@@ -1,6 +1,7 @@
 ---
 title: Node常用的方法命令
 date: '2018/10/29 22:39:25'
+type: post
 tag: node
 meta:
   -

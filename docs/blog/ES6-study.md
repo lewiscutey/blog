@@ -1,6 +1,7 @@
 ---
 title: ES6学习笔记
 date: "2018/09/08 09:54:54"
+type: post
 tag: ES6
 meta:
   - name: description

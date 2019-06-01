@@ -1,6 +1,7 @@
 ---
 title: JavaScript奇技淫巧
 date: '2018/12/19 23:07:24'
+type: post
 tag: JavaScript
 meta:
   -

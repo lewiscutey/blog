@@ -1,6 +1,7 @@
 ---
 title: webpack学习笔记
 date: '2019/03/04 21:38:07'
+type: post
 tag: webpack
 meta:
   -

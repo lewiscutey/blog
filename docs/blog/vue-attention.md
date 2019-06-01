@@ -1,6 +1,7 @@
 ---
 title: Vue开发注意事项
 date: '2018/11/26 20:34:13'
+type: post
 tag: Vue
 meta:
   -

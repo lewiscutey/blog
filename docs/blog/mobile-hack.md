@@ -1,6 +1,7 @@
 ---
 title: mobile-hack
 date: '2018/09/08 17:20:30'
+type: post
 tag: ['H5','mobile']
 meta:
   -

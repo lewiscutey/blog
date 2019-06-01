@@ -1,6 +1,7 @@
 ---
 title: Node学习笔记
 date: '2018/10/31 23:28:24'
+type: post
 tag: node
 meta:
   -

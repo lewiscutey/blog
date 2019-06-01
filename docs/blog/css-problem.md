@@ -1,6 +1,7 @@
 ---
 title: CSS问题集合
-date: '2018/12/10 20:30:56'
+date: 2018/12/10 20:30:56
+type: post
 tag: CSS
 meta:
   -

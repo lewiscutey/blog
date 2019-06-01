@@ -1,6 +1,7 @@
 ---
 title: eslint规则速览表
 date: '2018/10/09 10:40:37'
+type: post
 tag: eslint
 meta:
   -

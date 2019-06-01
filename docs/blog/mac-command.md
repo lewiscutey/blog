@@ -1,6 +1,7 @@
 ---
 title: Mac常用命令
 date: '2018/09/10 20:31:59'
+type: post
 tag: Mac
 meta:
   -

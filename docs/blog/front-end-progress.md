@@ -1,6 +1,7 @@
 ---
 title: 高级前端进阶系列文章
 date: '2018/11/19 22:45:57'
+type: post
 tag: ['front', 'process']
 meta:
   -

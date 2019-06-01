@@ -1,6 +1,7 @@
 ---
 title: 如何写出优雅的JS代码
 date: '2018/08/29 21:00:24'
+type: post
 tag: code
 meta:
   -

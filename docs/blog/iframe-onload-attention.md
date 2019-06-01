@@ -1,6 +1,7 @@
 ---
 title: iframe中的onload事件深藏功与名
 date: "2019/04/27 11:05:09"
+type: post
 tag: iframe
 meta:
   - name: description

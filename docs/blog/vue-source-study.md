@@ -1,6 +1,7 @@
 ---
 title: vue源码学习笔记
 date: '2018/10/06 14:56:31'
+type: post
 tag: [vue,source-code]
 meta:
   -

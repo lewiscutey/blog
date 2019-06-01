@@ -1,6 +1,7 @@
 ---
 title: vuepress折腾记
 date: '2018/08/05 17:31:04'
+type: post
 tag: ['vuepress-init', 'vuepress-theme-yubisaki', 'blog']
 meta:
   -

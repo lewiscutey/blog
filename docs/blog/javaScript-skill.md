@@ -1,6 +1,7 @@
 ---
 title: JavaScript高级技巧
 date: "2018/10/20 17:24:39"
+type: post
 tag: [JavaScript, skill]
 meta:
   - name: description
