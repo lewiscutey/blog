@@ -6,8 +6,8 @@ module.exports = {
         ['link', { rel: 'icon', href: `/favicon.ico` }]
     ],
     port: 5000,
-    base: '/',
-    repo: 'https://github.com/lewiscutey/blog',
+    base: '/blog/',
+    repo: 'https://github.com/lewiscutey/blog/',
     ga: '',
     serviceWorker: true,
     evergreen: true,
