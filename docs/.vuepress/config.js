@@ -8,7 +8,7 @@ module.exports = {
     port: 5000,
     base: '/blog/',
     repo: 'https://github.com/lewiscutey/blog/',
-    ga: '',
+    ga: 'UA-141099384-1',
     serviceWorker: true,
     evergreen: true,
     markdown: {
