@@ -5,6 +5,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 docs/.vuepress/dist
+yarn.lock
 
 # Editor directories and files
 .gitignore

@@ -22,14 +22,14 @@ module.exports = {
         footer: '如果说人生是一场旅行，而我是这场旅行的主人!',
         perPagePosts: 10,
         date_format: 'yyyy-MM-dd HH:mm:ss',
-        comment: {
-            clientID: '4779161d8d0e96d18948',
-            clientSecret: '2a8c36f4b3eda7e692224be513730f94443085dd',
-            repo: 'blog',
-            owner: 'lewiscutey',
-            admin: 'lewiscutey',
-            distractionFreeMode: false
-        },
+        // comment: {
+        //     clientID: '4779161d8d0e96d18948',
+        //     clientSecret: '2a8c36f4b3eda7e692224be513730f94443085dd',
+        //     repo: 'blog',
+        //     owner: 'lewiscutey',
+        //     admin: 'lewiscutey',
+        //     distractionFreeMode: false
+        // },
         nav: [
             {text: 'Blog', link: '/'},
             {text: 'About', link: '/about/'},
