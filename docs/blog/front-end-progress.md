@@ -47,6 +47,9 @@ meta:
 * [JavaScript 高阶函数浅析](https://mp.weixin.qq.com/s/_CForjghNYMb7Zj781JL4Q)
 * [深入高阶函数应用之柯里化](https://mp.weixin.qq.com/s/hSK7KJ6RsC_zaCL_06huGg)
 * [深入浅出节流函数 throttle](https://mp.weixin.qq.com/s/1U8gsj4kv00GrMDWRw7Y2Q)
+* [深入浅出防抖函数 debounce](https://mp.weixin.qq.com/s/O3De-65s9Pa-gLRj75m4-A)
+* [Throttle 和 Debounce 在 React 中的应用](https://mp.weixin.qq.com/s/Cz3ZwGBUXzDl_WauQ_mhwQ)
+* [深入篇 | Lodash 防抖和节流是怎么实现的](https://mp.weixin.qq.com/s/G5_Fl_1dd5JnwHZZVhJ4uA)
 ## 【进阶7期】 事件机制
 ## 【进阶8期】 Event Loop原理
 ## 【进阶9期】 Promise原理
@@ -73,12 +76,11 @@ meta:
 ## 【进阶29期】babel原理
 [babel7使用手册](https://mp.weixin.qq.com/s/AURDiWwspdfRExopNf4YLQ)
 ## 【进阶30期】面试官问系列
-* [能否模拟实现JS的bind方法](https://juejin.im/post/5bec4183f265da616b1044d7)
-* [能否模拟实现JS的new操作符](https://juejin.im/post/5bde7c926fb9a049f66b8b52)
-* [能否模拟实现JS的call和apply方法](https://juejin.im/post/5bf6c79bf265da6142738b29)
 * [前端面试查漏补缺--Index篇(12万字符合集)](https://juejin.im/post/5c73347cf265da2dd773e7dc)
 * [前端面试系列](https://yuchengkai.cn/docs/frontend/)
-* [中高级前端大厂面试秘籍，为你保驾护航金三银四，直通大厂](https://juejin.im/post/5c64d15d6fb9a049d37f9c20)
+* [中高级前端大厂面试秘籍，为你保驾护航金三银四，直通大厂-上](https://juejin.im/post/5c64d15d6fb9a049d37f9c20)
+* [中高级前端大厂面试秘籍，为你保驾护航金三银四，直通大厂-中](https://juejin.im/post/5c92f499f265da612647b754)
+* [中高级前端大厂面试秘籍，为你保驾护航金三银四，直通大厂-下](https://juejin.im/post/5cc26dfef265da037b611738)
 
 ## js算法深入系列
 * [浏览器内部工作原理](https://www.cnblogs.com/rainy-shurun/p/5603686.html)
