@@ -51,3 +51,44 @@ git fetch upstream git rebase upstream/master git push origin master
 提交pr
 去自己github仓库对应fork的项目下new pull request
 ```
+
+## 落后于远程分支代码时rebase流程:
+
+``` javascript
+git branch -av
+git remote add src ssh://git@
+git branch -av
+git fetch src
+git rebase src/master
+git push --force
+git log 查看commit日志只保留一条
+```
+
+## git reset
+
+```
+git reset (–mixed) HEAD~1
+
+回退一个版本,且会将暂存区的内容和本地已提交的内容全部恢复到未暂存的状态,不影响原来本地文件(未提交的也不受影响)回到add之前；
+
+git reset –soft HEAD~1
+回退一个版本,不清空暂存区,将已提交的内容恢复到暂存区,不影响原来本地的文件(未提交的也不受影响)回到commit前；
+
+git reset –hard HEAD~1
+回退一个版本,清空暂存区,将已提交的内容的版本恢复到本地,本地的文件也将被恢复的版本替换；彻底回滚到上一个版本；
+```
+
+## 个人Git工作原则
+永远基于远程库的最新代码工作，尽量每一步操作（特别是add/commit/push）都通过git pull --rebase获取一下当前最新版本。
+
+## 多人在同一分支开发
+基于同一个远程分支开发的时候，如果想要顺利 push 又不自动生成 merge commit，建议在每次提交都按照如下顺序操作：
+```
+git stash
+
+git pull --rebase
+
+git push
+
+git stash pop
+```

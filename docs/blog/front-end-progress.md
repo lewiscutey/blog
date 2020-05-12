@@ -50,6 +50,8 @@ meta:
 * [深入浅出防抖函数 debounce](https://mp.weixin.qq.com/s/O3De-65s9Pa-gLRj75m4-A)
 * [Throttle 和 Debounce 在 React 中的应用](https://mp.weixin.qq.com/s/Cz3ZwGBUXzDl_WauQ_mhwQ)
 * [深入篇 | Lodash 防抖和节流是怎么实现的](https://mp.weixin.qq.com/s/G5_Fl_1dd5JnwHZZVhJ4uA)
+* [Array 原型方法源码实现大揭秘](https://juejin.im/post/5d76f08ef265da03970be192)
+
 ## 【进阶7期】 事件机制
 ## 【进阶8期】 Event Loop原理
 ## 【进阶9期】 Promise原理

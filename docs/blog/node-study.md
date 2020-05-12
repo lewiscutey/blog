@@ -11,7 +11,7 @@ meta:
     name: keywords
     content: node
 ---
-总结一些 Node 的学习笔记。。。
+总结一些 Node 的学习笔记及常见问题。。。
 <!-- more -->
 
 ## 1. 请求头中Content-Type的常用类型
@@ -104,3 +104,20 @@ fs.writeFile('README.md', 'Hello Node.js', {flag: 'a+'}, (err) => {
 | ax |	类似 'a'， 但是如果文件路径存在，则文件追加失败。|
 | a+ |	以读取追加模式打开文件，如果文件不存在则创建。|
 | ax+ |	类似 'a+'， 但是如果文件路径存在，则文件读取追加失败。|
+
+
+## 4. 常用路径
+* `__dirname`: 当前执行的 JS 文件所在的文件夹的绝对路径
+* `__filename`: 当前执行的 JS 文件的绝对路径
+* `process.cwd()`: 运行`node xxx.js`时所在的文件夹的绝对路径
+* `path.resolve('./')`: 运行`node xxx.js`时所在的文件夹的绝对路径
+
+
+
+
+## 常见错误
+1、 Error: spawn /bin/sh ENOENT
+
+问题描述：[https://github.com/nodejs/node/issues/9644](https://github.com/nodejs/node/issues/9644)
+
+解决方式：检查cwd的路径配置是否正确以及是否有权限执行该命令；
