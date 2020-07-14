@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>一文彻底弄懂wx.chooseImage | HOME</title>
+    <meta name="description" content="解决微信小程序中web-view里使用chooseImage">
+    <link rel="icon" href="/blog/favicon.ico">
+    <meta name="keywords" content="web-view,小程序,chooseImage">
+    <link rel="preload" href="/blog/assets/css/0.styles.03f43f65.css" as="style"><link rel="preload" href="/blog/assets/js/app.426b1919.js" as="script"><link rel="preload" href="/blog/assets/js/8.723e2475.js" as="script"><link rel="preload" href="/blog/assets/js/3.79418191.js" as="script"><link rel="preload" href="/blog/assets/js/16.d48bf774.js" as="script"><link rel="preload" href="/blog/assets/js/19.ff47a288.js" as="script"><link rel="preload" href="/blog/assets/js/13.7908793c.js" as="script"><link rel="preload" href="/blog/assets/js/68.f115d1bc.js" as="script"><link rel="preload" href="/blog/assets/js/5.da195e96.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.55a543e4.js"><link rel="prefetch" href="/blog/assets/js/11.e5597df6.js"><link rel="prefetch" href="/blog/assets/js/12.b7ba11c7.js"><link rel="prefetch" href="/blog/assets/js/14.4410875d.js"><link rel="prefetch" href="/blog/assets/js/15.b657430a.js"><link rel="prefetch" href="/blog/assets/js/17.eeefbc07.js"><link rel="prefetch" href="/blog/assets/js/18.010cd5bc.js"><link rel="prefetch" href="/blog/assets/js/20.d0f52bb3.js"><link rel="prefetch" href="/blog/assets/js/21.9bea050c.js"><link rel="prefetch" href="/blog/assets/js/22.ee11d625.js"><link rel="prefetch" href="/blog/assets/js/23.6e634148.js"><link rel="prefetch" href="/blog/assets/js/24.e0f856db.js"><link rel="prefetch" href="/blog/assets/js/25.f97f7d33.js"><link rel="prefetch" href="/blog/assets/js/26.7681393f.js"><link rel="prefetch" href="/blog/assets/js/27.102f400b.js"><link rel="prefetch" href="/blog/assets/js/28.46c69e24.js"><link rel="prefetch" href="/blog/assets/js/29.bb64475f.js"><link rel="prefetch" href="/blog/assets/js/30.12416738.js"><link rel="prefetch" href="/blog/assets/js/31.7cc64602.js"><link rel="prefetch" href="/blog/assets/js/32.175d94de.js"><link rel="prefetch" href="/blog/assets/js/33.89a17daf.js"><link rel="prefetch" href="/blog/assets/js/34.a0106064.js"><link rel="prefetch" href="/blog/assets/js/35.970f9d7e.js"><link rel="prefetch" href="/blog/assets/js/36.fa8d9d4e.js"><link rel="prefetch" href="/blog/assets/js/37.93b81ade.js"><link rel="prefetch" href="/blog/assets/js/38.f242f2da.js"><link rel="prefetch" href="/blog/assets/js/39.91d1d0fb.js"><link rel="prefetch" href="/blog/assets/js/4.acd5b20f.js"><link rel="prefetch" href="/blog/assets/js/40.ec8fc8a2.js"><link rel="prefetch" href="/blog/assets/js/41.51829cee.js"><link rel="prefetch" href="/blog/assets/js/42.5614ec93.js"><link rel="prefetch" href="/blog/assets/js/43.eb03efc3.js"><link rel="prefetch" href="/blog/assets/js/44.c9e2f6ff.js"><link rel="prefetch" href="/blog/assets/js/45.0a9bbd19.js"><link rel="prefetch" href="/blog/assets/js/46.27f8e029.js"><link rel="prefetch" href="/blog/assets/js/47.1e0af253.js"><link rel="prefetch" href="/blog/assets/js/48.a7d6b692.js"><link rel="prefetch" href="/blog/assets/js/49.d8dfe89c.js"><link rel="prefetch" href="/blog/assets/js/50.c134af69.js"><link rel="prefetch" href="/blog/assets/js/51.f1cb3058.js"><link rel="prefetch" href="/blog/assets/js/52.fb7584dc.js"><link rel="prefetch" href="/blog/assets/js/53.5e6bf0ad.js"><link rel="prefetch" href="/blog/assets/js/54.a139237b.js"><link rel="prefetch" href="/blog/assets/js/55.2c8c1bd1.js"><link rel="prefetch" href="/blog/assets/js/56.d09c9904.js"><link rel="prefetch" href="/blog/assets/js/57.ac762da0.js"><link rel="prefetch" href="/blog/assets/js/58.84bdcdb4.js"><link rel="prefetch" href="/blog/assets/js/59.d6c177ba.js"><link rel="prefetch" href="/blog/assets/js/6.acfbb48a.js"><link rel="prefetch" href="/blog/assets/js/60.93b65c4d.js"><link rel="prefetch" href="/blog/assets/js/61.f562ba6c.js"><link rel="prefetch" href="/blog/assets/js/62.3eb3a491.js"><link rel="prefetch" href="/blog/assets/js/63.5175822a.js"><link rel="prefetch" href="/blog/assets/js/64.fcc0d5d9.js"><link rel="prefetch" href="/blog/assets/js/65.681bdc18.js"><link rel="prefetch" href="/blog/assets/js/66.85152f7f.js"><link rel="prefetch" href="/blog/assets/js/67.b6ff2ed4.js"><link rel="prefetch" href="/blog/assets/js/69.0259fb8a.js"><link rel="prefetch" href="/blog/assets/js/7.1e8f103c.js"><link rel="prefetch" href="/blog/assets/js/70.176336c8.js"><link rel="prefetch" href="/blog/assets/js/9.123bc00f.js"><link rel="prefetch" href="/blog/assets/js/vendors~flowchart.9809e798.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.03f43f65.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme"><header class="navbar"><div class="nav-header"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/img/logo.png" class="logo"> <span class="site-name can-hide">
+        HOME
+      </span></a> <nav class="nav-links can-hide"><ul class="nav-ul"><li class="nav-item"><a href="/blog/" class="nav-link">Blog</a></li><li class="nav-item"><a href="/blog/about/" class="nav-link">About</a></li><li class="nav-item"><a href="/blog/tag/" class="nav-link">Tags</a></li><li class="nav-item"><a href="http://www.cnblogs.com/lewiscutey/" target="_blank" rel="noopener noreferrer" class="nav-link">CSDN</a></li><li class="nav-item"><a href="https://github.com/lewiscutey" target="_blank" rel="noopener noreferrer" class="nav-link">Github</a></li></ul></nav> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div></div></header> <div class="sidebar-mask"></div> <!----> <div class="layout-container"><div class="main"><div class="layout-inner"><div class="card"><div class="content-header"><h1 class="page-title">一文彻底弄懂wx.chooseImage</h1> <span class="page-timestamp">2019-06-07 10:32:06</span></div> <div class="content default"><p>这个需求做下来参考了不少文章，其实大多都是一知半解，每个人遇到的问题不同，这篇文章可以说彻底解决<code>wx.chooseImage</code>的各种疑难杂症，一步到位,因此趁着今天休息把整个过程记录下来，分享给之后有需要的各位同行！
+</p> <blockquote><p>最近在做一个复杂的跨五端（PC、H5、小程序、iOS、android）的需求，历时将近两个多月，其中酸甜苦辣冷暖自知，近日终于可以封板上线，回忆整个开发过程，深坑不断，收获颇多，今天先分享一下在微信小程序的web-view里选取照片的功能，此文完整的记录整个开发过程，彻底解决各种疑难杂症。</p></blockquote> <h2 id="深度调研"><a href="#深度调研" aria-hidden="true" class="header-anchor">#</a> 深度调研</h2> <p>因为跨端所以最开始使用了<code>&lt;input type=&quot;file&quot; accept=&quot;image/*&quot; capture=&quot;camera&quot;&gt;</code>的方式，简单粗暴可使用，五端勉强都可以打个及格分，一直到联调结束PM检测时说体验太差了，趁着还有时间（其实我也看不下去），索性就按PM的要求来，开始计划调用原生的，因为客户端之前已经提供了这样的<strong>bridge</strong>，所以和客户端的头像调试轻松完成，剩下的小程序历经万千磨难，最终完美谢幕。</p> <p>首先没有做过这方面的经验，两眼一抹黑，由于是把H5页面嵌套在小程序的<strong>web-view</strong>里，所以直接查看官方文档，小程序向web-view提供了三十多个API-<a href="https://developers.weixin.qq.com/miniprogram/dev/component/web-view.html" target="_blank" rel="noopener noreferrer">详情文档<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>。至此以为可以轻松搞定，于是开始了不断的趟坑。。。</p> <h2 id="按步开发"><a href="#按步开发" aria-hidden="true" class="header-anchor">#</a> 按步开发</h2> <p>刚开始直接在H5里使用了<code>wx.chooseImage</code>,发现在开发者工具中不断的报错<code>the permission value is offline verifying</code>,慢慢开始搜索才发现在小程序的web-view里也必须使用<strong>jweixin</strong>,其实就是个公众号网页，接下来开始按<a href="https://qydev.weixin.qq.com/wiki/index.php?title=%E5%BE%AE%E4%BF%A1JS-SDK%E6%8E%A5%E5%8F%A3#.E6.AD.A5.E9.AA.A4.E4.B8.80.EF.BC.9A.E5.BC.95.E5.85.A5JS.E6.96.87.E4.BB.B6" target="_blank" rel="noopener noreferrer">这套流程<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>走:</p> <ol><li>引入JS文件</li></ol> <div class="language- extra-class"><pre class="language-text"><code>// 推荐使用1.3.2以上的版本，之前的版本很多坑😭
+https://res.wx.qq.com/open/js/jweixin-1.3.2.js
+// 我是直接用的npm包，目前基于1.4.0-test的版本
+npm install weixin-js-sdk
+</code></pre></div><ol start="2"><li>通过config接口注入权限验证配置</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code>wx<span class="token punctuation">.</span><span class="token function">config</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    debug<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。</span>
+    appId<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span> <span class="token comment">// 必填，微信公众号的唯一标识，此处填写公众号的appId</span>
+    timestamp<span class="token punctuation">:</span> <span class="token punctuation">,</span> <span class="token comment">// 必填，生成签名的时间戳</span>
+    nonceStr<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span> <span class="token comment">// 必填，生成签名的随机串</span>
+    signature<span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">,</span><span class="token comment">// 必填，签名</span>
+    jsApiList<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token comment">// 必填，需要使用的JS接口列表，所有JS接口列表见附录2</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><ol start="3"><li>通过ready接口处理成功验证</li></ol> <div class="language- extra-class"><pre class="language-text"><code>wx.ready(function(){
+    // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
+});
+</code></pre></div><ol start="4"><li>通过error接口处理失败验证</li></ol> <div class="language- extra-class"><pre class="language-text"><code>wx.error(function(res){
+    // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
+});
+</code></pre></div><ol start="5"><li>判断当前客户端版本是否支持指定JS接口</li></ol> <div class="language- extra-class"><pre class="language-text"><code>wx.checkJsApi({
+    jsApiList: ['chooseImage'] // 需要检测的JS接口列表
+    success: function(res) {
+    // 以键值对的形式返回，可用的api值true，不可用为false
+    // 如：{&quot;checkResult&quot;:{&quot;chooseImage&quot;:true},&quot;errMsg&quot;:&quot;checkJsApi:ok&quot;}
+    },
+    fail: function(err) {
+    // checkJsApi接口调用失败
+    }
+});
+</code></pre></div><ol start="6"><li>接口调用</li></ol> <div class="language- extra-class"><pre class="language-text"><code>wx.chooseImage({
+    count: 1, // 默认9
+    sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+    sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+    success: function (res) {
+        var localIds = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
+    }
+});
+</code></pre></div><p><strong>本部分要特别注意以下几点：</strong></p> <ul><li>invalid url domain：当前页面所在域名与使用<strong>appid</strong>没有绑定（可在该公众号后台的应用可信域名中配置当前H5页面的域名）；</li> <li>invalid signature签名错误：建议按<a href="https://qydev.weixin.qq.com/wiki/index.php?title=%E5%BE%AE%E4%BF%A1JS-SDK%E6%8E%A5%E5%8F%A3#.E9.99.84.E5.BD.956-.E5.B8.B8.E8.A7.81.E9.94.99.E8.AF.AF.E5.8F.8A.E8.A7.A3.E5.86.B3.E6.96.B9.E6.B3.95" target="_blank" rel="noopener noreferrer">如下顺序检查<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>，主要可能是域名一般带的参数，所以域名每次都不一样，必须在调用前通过域名来获取signature；</li> <li>服务上线之后无法获取jsapi_ticket,一般是access_token调用次数过多被限制了，需要在服务端做缓存；</li> <li>permission denied：该公众号号没有权限使用这个JSAPI（部分接口需要认证之后才能使用）；</li></ul> <h2 id="处理图片数据为base64"><a href="#处理图片数据为base64" aria-hidden="true" class="header-anchor">#</a> 处理图片数据为base64</h2> <p><code>wx.chooseImage</code>获取到的图片为一个临时路径，微信同时提供了<code>wx.getLocalImgData</code>方法可以把获取到的路径转为base64格式的数据，至此就可以轻松许多了，但是转出来的base64在android和iOS中稍有不同，需要特别注意一下：</p> <div class="language- extra-class"><pre class="language-text"><code>wx.getLocalImgData({
+    localId: req.localIds[0].toString(),
+    success: function (res) {
+        const localData = res.localData;
+        let imageBase64 = '';
+        if (localData.indexOf('data:image') == 0) {
+            //苹果的直接赋值，默认生成'data:image/jpeg;base64,'的头部拼接
+            imageBase64 = localData;
+        } else {
+            //此处是安卓中的唯一得坑！在拼接前需要对localData进行换行符的全局替换
+            //此时一个正常的base64图片路径就完美生成赋值到img的src中了
+            imageBase64 = 'data:image/jpeg;base64,' + localData.replace(/\n/g, '');
+        }
+    }
+});
+</code></pre></div><h2 id="上传图片"><a href="#上传图片" aria-hidden="true" class="header-anchor">#</a> 上传图片</h2> <blockquote><p>获取到图片的base64数据之后其实我们就可以为所欲为了，不需要使用<code>wx.uploadImage</code>和<code>wx.downloadImage</code>了，不仅需要麻烦的上传到微信服务器，还有三天的时间限制反而增加了成本，最好的方式就是直接上传至我们自己的服务器。</p></blockquote> <p>一般与服务端交互的这种文件类型一般采用<strong>表单提交--multipart/form-data</strong>的方式，这就要求我们熟悉传输<a href="https://www.cnblogs.com/shanyou/archive/2013/06/07/3123155.html" target="_blank" rel="noopener noreferrer"><strong>form-data</strong><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>的数据交互，所以需要把刚才获取到的base64转为可post的二进制数据，JavaScript提供了原生的<code>atob/btoa</code>用来对base64进行编码和解码；</p> <div class="language- extra-class"><pre class="language-text"><code>base64ToBlob(dataurl) {
+    let arr = dataurl.split(',');
+    let mime = arr[0].match(/:(.*?);/)[1];
+    let bstr = atob(arr[1]);
+    let n = bstr.length;
+    let u8arr = new Uint8Array(n);
+    while (n--) {
+        u8arr[n] = bstr.charCodeAt(n);
+    }
+    return new Blob([u8arr], { type: mime });
+}
+</code></pre></div><p>ok,处理好可交互的数据就可以上传到自己的服务器了，之后相当于普通H5页面的图片交互了,可上传可下载😄</p> <div class="language- extra-class"><pre class="language-text"><code>let param = new FormData();
+param.append('headPic', imageData);
+this.$http.post('/upload.json', {
+    headers: {
+        'Content-Type': 'multipart/form-data',
+    },
+    params: param,
+}).then(res =&gt; {
+    console.log('上传成功', res);
+});
+</code></pre></div><h2 id="完整代码"><a href="#完整代码" aria-hidden="true" class="header-anchor">#</a> 完整代码</h2> <p>终于。。。可以告一段落了，至此小程序的<code>web-view</code>里成功使用了<code>wx.chooseImage</code>,下面把完整代码贴出来，敬请参考😄</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+    &lt;div class=&quot;card-avatar&quot;&gt;
+      &lt;img
+        :src=&quot;avatarUrl&quot;
+      &gt;
+      &lt;div
+        class=&quot;choose-image&quot;
+        @click=&quot;chooseImage&quot;
+      /&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import wx from 'weixin-js-sdk';
+const imgUrl = require('../../common/assets/images/default-avatar.png')；
+
+export default {
+  name: 'Card',
+  components: {
+  },
+  props: {
+  },
+  data() {
+    return {
+      avatarUrl: imgUrl,
+    };
+  },
+  computed: {
+  },
+  watch: {
+  },
+  mounted() {
+    this.getWxConfigDatas();
+  },
+  methods: {
+    getWxConfigDatas() {
+      const params = {
+        checkCode: getUrlParams().checkCode,  // 从地址栏获取checkCode用于校验signature
+      };
+      this.$http.get('/signature.json', { params }).then(res =&gt; {
+        if (res.content.data &amp;&amp; res.content.data.signature) {
+          this.registereWxApi(res.content.data.signature);
+        }
+      });
+    },
+    registereWxApi(data) {
+      wx.config({
+        // debug: true,
+        jsApiList: ['chooseImage', 'getLocalImgData'],
+        appId: data.appId,
+        timestamp: data.timestamp,
+        nonceStr: data.nonceStr,
+        signature: data.signature,
+      });
+    },
+    chooseImage() {
+      let that = this;
+      if (window.__wxjs_environment === 'miniprogram') {
+        wx.miniProgram.getEnv(function(res) {
+          if (res.miniprogram) {
+            wx.checkJsApi({
+              jsApiList: ['chooseImage', 'getLocalImgData'],
+              success: function(res) {
+                if (res.checkResult.chooseImage) {
+                  wx.chooseImage({
+                    count: 1,
+                    sizeType: ['compressed'],
+                    sourceType: ['album', 'camera'],
+                    success: function(req) {
+                      wx.getLocalImgData({
+                        localId: req.localIds[0].toString(),
+                        success: function (res) {
+                          const localData = res.localData;
+                          let imageBase64 = '';
+                          if (localData.indexOf('data:image') == 0) {
+                            //苹果的直接赋值，默认生成'data:image/jpeg;base64,'的头部拼接
+                            imageBase64 = localData;
+                          } else {
+                            //此处是安卓中的唯一得坑！在拼接前需要对localData进行换行符的全局替换
+                            //此时一个正常的base64图片路径就完美生成赋值到img的src中了
+                            imageBase64 = 'data:image/jpeg;base64,' + localData.replace(/\n/g, '');
+                          }
+                          that.avatarUrl = imageBase64;
+                          that.handleAvatar(that.dataURLtoBlob(imageBase64));
+                        }
+                      });
+                    },
+                    fail() {
+                      that.$toast.show({
+                        type: 'text',
+                        text: '选择头像失败！',
+                      });
+                    }
+                  });
+                } else {
+                  that.$toast.show({
+                    type: 'text',
+                    text: '暂不支持修改头像！',
+                  });
+                }
+              },
+              fail: function() {
+                that.$toast.show({
+                  type: 'text',
+                  text: '暂不支持修改头像！',
+                });
+              },
+            });
+          } else {
+            that.lgBridgeChooseImage();
+          }
+        });
+      } else {
+        that.lgBridgeChooseImage();
+      }
+    },
+    handleAvatar(imageData) {
+        let that = this;
+        let param = new FormData();
+        param.append('headPic', imageData);
+        that.$http.post('/upload.json', {
+            headers: {
+                'Content-Type': 'multipart/form-data',
+            },
+        params: param,
+        }).then(res =&gt; {
+        if (parseInt(res.state, 10) === 1) {
+            that.$toast.show({
+                type: 'success',
+                text: '上传成功！',
+            });
+          that.avatarUrl = res.content &amp;&amp; res.content.data &amp;&amp; res.content.data.url;
+        }
+      });
+    },
+    dataURLtoBlob(dataurl) {
+      let arr = dataurl.split(',');
+      let mime = arr[0].match(/:(.*?);/)[1];
+      let bstr = atob(arr[1]);
+      let n = bstr.length;
+      let u8arr = new Uint8Array(n);
+      while (n--) {
+        u8arr[n] = bstr.charCodeAt(n);
+      }
+      return new Blob([u8arr], { type: mime });
+    }
+  }
+};
+&lt;/script&gt;
+
+&lt;style lang=&quot;less&quot; scoped&gt;
+.card-avatar {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    .choose-image, input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+}
+&lt;/style&gt;
+</code></pre></div><p>这个需求做下来参考了不少文章，其实大多都是一知半解，每个人遇到的问题不同，这篇文章可以说彻底解决<code>wx.chooseImage</code>的各种疑难杂症，一步到位,因此趁着今天休息把整个过程记录下来，分享给之后有需要的各位同行！</p></div> <div class="content page-nav"><p class="inner"><span class="prev">←
+          <a href="/blog/blog/ios-keyboard-blank.html" class="prev">一文彻底解决iOS中键盘回落后留白问题</a></span> <span class="next"><a href="/blog/blog/javascript-algorithm-1.html">前端小白的算法之路</a>→
+        </span></p></div></div> <!----></div> <div class="tool-group"><!----></div></div></div> <footer class="footer"><span>如果说人生是一场旅行，而我是这场旅行的主人!</span></footer></div><div class="global-ui"><!----></div></div>
+    <script src="/blog/assets/js/app.426b1919.js" defer></script><script src="/blog/assets/js/8.723e2475.js" defer></script><script src="/blog/assets/js/3.79418191.js" defer></script><script src="/blog/assets/js/16.d48bf774.js" defer></script><script src="/blog/assets/js/19.ff47a288.js" defer></script><script src="/blog/assets/js/13.7908793c.js" defer></script><script src="/blog/assets/js/68.f115d1bc.js" defer></script><script src="/blog/assets/js/5.da195e96.js" defer></script>
+  </body>
+</html>

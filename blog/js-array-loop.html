@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>一文彻底学以致用js数组之循环 | HOME</title>
+    <meta name="description" content="JavaScript数组中的循环">
+    <link rel="icon" href="/blog/favicon.ico">
+    <meta name="keywords" content="javascript, array">
+    <link rel="preload" href="/blog/assets/css/0.styles.03f43f65.css" as="style"><link rel="preload" href="/blog/assets/js/app.426b1919.js" as="script"><link rel="preload" href="/blog/assets/js/8.723e2475.js" as="script"><link rel="preload" href="/blog/assets/js/3.79418191.js" as="script"><link rel="preload" href="/blog/assets/js/16.d48bf774.js" as="script"><link rel="preload" href="/blog/assets/js/19.ff47a288.js" as="script"><link rel="preload" href="/blog/assets/js/13.7908793c.js" as="script"><link rel="preload" href="/blog/assets/js/49.d8dfe89c.js" as="script"><link rel="preload" href="/blog/assets/js/5.da195e96.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.55a543e4.js"><link rel="prefetch" href="/blog/assets/js/11.e5597df6.js"><link rel="prefetch" href="/blog/assets/js/12.b7ba11c7.js"><link rel="prefetch" href="/blog/assets/js/14.4410875d.js"><link rel="prefetch" href="/blog/assets/js/15.b657430a.js"><link rel="prefetch" href="/blog/assets/js/17.eeefbc07.js"><link rel="prefetch" href="/blog/assets/js/18.010cd5bc.js"><link rel="prefetch" href="/blog/assets/js/20.d0f52bb3.js"><link rel="prefetch" href="/blog/assets/js/21.9bea050c.js"><link rel="prefetch" href="/blog/assets/js/22.ee11d625.js"><link rel="prefetch" href="/blog/assets/js/23.6e634148.js"><link rel="prefetch" href="/blog/assets/js/24.e0f856db.js"><link rel="prefetch" href="/blog/assets/js/25.f97f7d33.js"><link rel="prefetch" href="/blog/assets/js/26.7681393f.js"><link rel="prefetch" href="/blog/assets/js/27.102f400b.js"><link rel="prefetch" href="/blog/assets/js/28.46c69e24.js"><link rel="prefetch" href="/blog/assets/js/29.bb64475f.js"><link rel="prefetch" href="/blog/assets/js/30.12416738.js"><link rel="prefetch" href="/blog/assets/js/31.7cc64602.js"><link rel="prefetch" href="/blog/assets/js/32.175d94de.js"><link rel="prefetch" href="/blog/assets/js/33.89a17daf.js"><link rel="prefetch" href="/blog/assets/js/34.a0106064.js"><link rel="prefetch" href="/blog/assets/js/35.970f9d7e.js"><link rel="prefetch" href="/blog/assets/js/36.fa8d9d4e.js"><link rel="prefetch" href="/blog/assets/js/37.93b81ade.js"><link rel="prefetch" href="/blog/assets/js/38.f242f2da.js"><link rel="prefetch" href="/blog/assets/js/39.91d1d0fb.js"><link rel="prefetch" href="/blog/assets/js/4.acd5b20f.js"><link rel="prefetch" href="/blog/assets/js/40.ec8fc8a2.js"><link rel="prefetch" href="/blog/assets/js/41.51829cee.js"><link rel="prefetch" href="/blog/assets/js/42.5614ec93.js"><link rel="prefetch" href="/blog/assets/js/43.eb03efc3.js"><link rel="prefetch" href="/blog/assets/js/44.c9e2f6ff.js"><link rel="prefetch" href="/blog/assets/js/45.0a9bbd19.js"><link rel="prefetch" href="/blog/assets/js/46.27f8e029.js"><link rel="prefetch" href="/blog/assets/js/47.1e0af253.js"><link rel="prefetch" href="/blog/assets/js/48.a7d6b692.js"><link rel="prefetch" href="/blog/assets/js/50.c134af69.js"><link rel="prefetch" href="/blog/assets/js/51.f1cb3058.js"><link rel="prefetch" href="/blog/assets/js/52.fb7584dc.js"><link rel="prefetch" href="/blog/assets/js/53.5e6bf0ad.js"><link rel="prefetch" href="/blog/assets/js/54.a139237b.js"><link rel="prefetch" href="/blog/assets/js/55.2c8c1bd1.js"><link rel="prefetch" href="/blog/assets/js/56.d09c9904.js"><link rel="prefetch" href="/blog/assets/js/57.ac762da0.js"><link rel="prefetch" href="/blog/assets/js/58.84bdcdb4.js"><link rel="prefetch" href="/blog/assets/js/59.d6c177ba.js"><link rel="prefetch" href="/blog/assets/js/6.acfbb48a.js"><link rel="prefetch" href="/blog/assets/js/60.93b65c4d.js"><link rel="prefetch" href="/blog/assets/js/61.f562ba6c.js"><link rel="prefetch" href="/blog/assets/js/62.3eb3a491.js"><link rel="prefetch" href="/blog/assets/js/63.5175822a.js"><link rel="prefetch" href="/blog/assets/js/64.fcc0d5d9.js"><link rel="prefetch" href="/blog/assets/js/65.681bdc18.js"><link rel="prefetch" href="/blog/assets/js/66.85152f7f.js"><link rel="prefetch" href="/blog/assets/js/67.b6ff2ed4.js"><link rel="prefetch" href="/blog/assets/js/68.f115d1bc.js"><link rel="prefetch" href="/blog/assets/js/69.0259fb8a.js"><link rel="prefetch" href="/blog/assets/js/7.1e8f103c.js"><link rel="prefetch" href="/blog/assets/js/70.176336c8.js"><link rel="prefetch" href="/blog/assets/js/9.123bc00f.js"><link rel="prefetch" href="/blog/assets/js/vendors~flowchart.9809e798.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.03f43f65.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme"><header class="navbar"><div class="nav-header"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/img/logo.png" class="logo"> <span class="site-name can-hide">
+        HOME
+      </span></a> <nav class="nav-links can-hide"><ul class="nav-ul"><li class="nav-item"><a href="/blog/" class="nav-link">Blog</a></li><li class="nav-item"><a href="/blog/about/" class="nav-link">About</a></li><li class="nav-item"><a href="/blog/tag/" class="nav-link">Tags</a></li><li class="nav-item"><a href="http://www.cnblogs.com/lewiscutey/" target="_blank" rel="noopener noreferrer" class="nav-link">CSDN</a></li><li class="nav-item"><a href="https://github.com/lewiscutey" target="_blank" rel="noopener noreferrer" class="nav-link">Github</a></li></ul></nav> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div></div></header> <div class="sidebar-mask"></div> <!----> <div class="layout-container"><div class="main"><div class="layout-inner"><div class="card"><div class="content-header"><h1 class="page-title">一文彻底学以致用js数组之循环</h1> <span class="page-timestamp">2019-06-19 20:20:10</span></div> <div class="content default"><p>本文志在彻底学以致用JavaScript数组之循环！
+</p> <blockquote><p>最近做了一个新项目，闲暇review了下代码，发现自己用了很多for循环（简洁明了），再看下别人的代码几乎没有<code>for</code>，几乎全是<code>foreach</code>和<code>map</code>循环，难道是我写的太low了吗？其实在写码的时候有时候也有选择恐慌症，到底该用哪种循环，最后发现其他方法总是不能为我所用，最后总是选择了最简单的<code>for</code>，怎一个好用了得，也早想花点时间好好研究比较一下数组的这些循环方法，下面就开始正文啦😄！</p></blockquote> <h1 id="_1-在es5中常用的10种数组遍历方法"><a href="#_1-在es5中常用的10种数组遍历方法" aria-hidden="true" class="header-anchor">#</a> 1. 在ES5中常用的10种数组遍历方法:</h1> <ol><li>for循环语句</li> <li>Array.prototype.forEach</li> <li>Array.prototype.map</li> <li>Array.prototype.filter</li> <li>Array.prototype.reduce</li> <li>Array.prototype.some</li> <li>Array.prototype.every</li> <li>Array.prototype.indexOf</li> <li>Array.prototype.lastIndexOf</li> <li>for...in循环语句</li></ol> <h3 id="_1-for：简洁明了，通俗易懂，可能需要多写点代码，多定义几个变量，但是为我所用，为我所爱。"><a href="#_1-for：简洁明了，通俗易懂，可能需要多写点代码，多定义几个变量，但是为我所用，为我所爱。" aria-hidden="true" class="header-anchor">#</a> 1. for：简洁明了，通俗易懂，可能需要多写点代码，多定义几个变量，但是为我所用，为我所爱。</h3> <div class="language-js extra-class"><pre class="language-js"><code>「普通版」
+<span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//[2, 4, 6, 8, 10]</span>
+ 
+「升级版」
+<span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> len <span class="token operator">=</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">,</span>i <span class="token operator">&lt;</span> len<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//[2, 4, 6, 8, 10]</span>
+</code></pre></div><h3 id="_2-foreach：接收两个参数，第一个参数是在每一项上运行的函数（拥有三个参数），第二个参数「可选的」是运行该函数的作用域对象（影响this的值），return不能中断函数继续执行，所以没有返回值，不能改变原数组，使用方便一般用来代替for，但是没for性能高，而且有兼容性（ie6-8）。"><a href="#_2-foreach：接收两个参数，第一个参数是在每一项上运行的函数（拥有三个参数），第二个参数「可选的」是运行该函数的作用域对象（影响this的值），return不能中断函数继续执行，所以没有返回值，不能改变原数组，使用方便一般用来代替for，但是没for性能高，而且有兼容性（ie6-8）。" aria-hidden="true" class="header-anchor">#</a> 2. forEach：接收两个参数，第一个参数是在每一项上运行的函数（拥有三个参数），第二个参数「可选的」是运行该函数的作用域对象（影响this的值），return不能中断函数继续执行，所以没有返回值，不能改变原数组，使用方便一般用来代替for，但是没for性能高，而且有兼容性（IE6-8）。</h3> <div class="language- extra-class"><pre class="language-text"><code>let arr = [1, 2, 3, 4, 5];
+arr.forEach((value, index, array) =&gt; {
+    return value * 2;
+});
+console.log(arr);  //[1, 2, 3, 4, 5]
+</code></pre></div><h3 id="_3-map：基本用法和foreach相同，不同的是可以return返回值-但是不改变原数组，一般用来修改数组的值从而映射为一个新数组。"><a href="#_3-map：基本用法和foreach相同，不同的是可以return返回值-但是不改变原数组，一般用来修改数组的值从而映射为一个新数组。" aria-hidden="true" class="header-anchor">#</a> 3. map：基本用法和foreach相同，不同的是可以return返回值,但是不改变原数组，一般用来修改数组的值从而映射为一个新数组。</h3> <div class="language- extra-class"><pre class="language-text"><code>let arr = [1, 2, 3, 4, 5];
+let arrs = arr.map((value, index, array) =&gt; {
+    return value * 2;
+});
+console.log(arrs); //[2, 4, 6, 8, 10]
+</code></pre></div><h3 id="_4-filter：顾名思义是-过滤-，就是去掉不想要的值，return-true为想要的值，return-false则为去掉的值，一般用来过滤一个数组，不改变原来的数组。"><a href="#_4-filter：顾名思义是-过滤-，就是去掉不想要的值，return-true为想要的值，return-false则为去掉的值，一般用来过滤一个数组，不改变原来的数组。" aria-hidden="true" class="header-anchor">#</a> 4. filter：顾名思义是&quot;过滤&quot;，就是去掉不想要的值，<code>return true</code>为想要的值，<code>return false</code>则为去掉的值，一般用来过滤一个数组，不改变原来的数组。</h3> <div class="language- extra-class"><pre class="language-text"><code>let arr = [1, 2, 3, 4, 5];
+let arrs = arr.filter((value, index, array) =&gt; {
+    if (value &gt; 2) {
+        return true;
+    } else {
+        return false;
+    }
+});
+console.log(arrs); //[3, 4, 5]
+</code></pre></div><h3 id="_5-reduce：可以实现一个累加器的功能，将数组的每个值（从左到右）累加起来，不同的是有四个参数，prev表示前两个值的和（没有定义初始值时为第一个值），next为后一个值。"><a href="#_5-reduce：可以实现一个累加器的功能，将数组的每个值（从左到右）累加起来，不同的是有四个参数，prev表示前两个值的和（没有定义初始值时为第一个值），next为后一个值。" aria-hidden="true" class="header-anchor">#</a> 5. reduce：可以实现一个累加器的功能，将数组的每个值（从左到右）累加起来，不同的是有四个参数，prev表示前两个值的和（没有定义初始值时为第一个值），next为后一个值。</h3> <div class="language- extra-class"><pre class="language-text"><code>let arr = [1, 2, 3, 4, 5];
+let arrs = arr.reduce((prev, next, index, array) =&gt; {
+    console.log(prev);   // 1，3，6，10
+    console.log(next);   // 2，3，4，5
+    return prev + next;
+});
+console.log(arrs);  //15
+</code></pre></div><h3 id="_6-some：类似于filter，不同的是返回值为boolean-不是筛选一个新的数组，而是筛选有没符合条件的值，只要有一个值满足即立刻返回true，不再继续执行，否则返回false。"><a href="#_6-some：类似于filter，不同的是返回值为boolean-不是筛选一个新的数组，而是筛选有没符合条件的值，只要有一个值满足即立刻返回true，不再继续执行，否则返回false。" aria-hidden="true" class="header-anchor">#</a> 6. some：类似于filter，不同的是返回值为<code>Boolean</code>,不是筛选一个新的数组，而是筛选有没符合条件的值，只要有一个值满足即立刻返回true，不再继续执行，否则返回false。</h3> <div class="language- extra-class"><pre class="language-text"><code>let arr = [1, 2, 3, 4, 5];
+let arrs = arr.some((value, index, array) =&gt; {
+    return value &gt; 3;
+});
+console.log(arrs); // true
+</code></pre></div><h3 id="_7-every：类似于some，不同的是找到符合条件的值会继续执行，如果每个值都满足条件才会返回true，否则就是false。"><a href="#_7-every：类似于some，不同的是找到符合条件的值会继续执行，如果每个值都满足条件才会返回true，否则就是false。" aria-hidden="true" class="header-anchor">#</a> 7. every：类似于some，不同的是找到符合条件的值会继续执行，如果每个值都满足条件才会返回true，否则就是false。</h3> <div class="language- extra-class"><pre class="language-text"><code>let arr = [1, 2, 3, 4, 5];
+let arrs = arr.every((value, index, array) =&gt; {
+    return value &gt; 3;
+});
+console.log(arrs);  //false
+ 
+let arr = [ 4, 5];
+let arrs = arr.every((value, index, array) =&gt; {
+    return value &gt; 3;
+});
+console.log(arrs);  //true
+</code></pre></div><h3 id="_8-indexof：数组中的这个方法和字符串中的几乎一样，都是找到一个满足条件的值就不继续执行了，返回值是满足条件值的下标，否则返回-1。"><a href="#_8-indexof：数组中的这个方法和字符串中的几乎一样，都是找到一个满足条件的值就不继续执行了，返回值是满足条件值的下标，否则返回-1。" aria-hidden="true" class="header-anchor">#</a> 8. indexOf：数组中的这个方法和字符串中的几乎一样，都是找到一个满足条件的值就不继续执行了，返回值是满足条件值的下标，否则返回-1。</h3> <div class="language- extra-class"><pre class="language-text"><code>let arr = [1, 2, 3, 4, 5];
+let arrs = arr.indexOf(2);
+console.log(arrs);  // 1
+ 
+let arr = [1, 2, 3, 4, 5];
+let arrs = arr.indexOf(6);
+console.log(arrs); // -1
+</code></pre></div><h3 id="_9-lastindexof：类似于indexof，不同的是查找方向是从后向前。"><a href="#_9-lastindexof：类似于indexof，不同的是查找方向是从后向前。" aria-hidden="true" class="header-anchor">#</a> 9. lastIndexOf：类似于indexOf，不同的是查找方向是从后向前。</h3> <div class="language- extra-class"><pre class="language-text"><code>let arr = [1, 2, 3, 4, 5, 1];
+let arrs = arr.lastIndexOf(1);
+console.log(arrs); // 5
+ 
+let arr = [1, 2, 3, 4, 5, 1];
+let arrs = arr.lastIndexOf(6);
+console.log(arrs); // -1
+</code></pre></div><h3 id="_10-for-in：主要用来遍历对象，其实数组的本质也是以key和value的键值对存在的，数组遍历的是下标，对象遍历的是key-一般用来遍历对象。"><a href="#_10-for-in：主要用来遍历对象，其实数组的本质也是以key和value的键值对存在的，数组遍历的是下标，对象遍历的是key-一般用来遍历对象。" aria-hidden="true" class="header-anchor">#</a> 10. for...in：主要用来遍历对象，其实数组的本质也是以key和value的键值对存在的，数组遍历的是下标，对象遍历的是key,一般用来遍历对象。</h3> <div class="language- extra-class"><pre class="language-text"><code>let arr = [1, 2, 3, 4, 5];
+for(let i in arr) {
+    console.log(i);  // 0, 1, 2, 3, 4
+}
+ 
+let arr = {name: &quot;lewis&quot;, age: 25};
+for(let i in arr) {
+    console.log(i);  // name, age
+}
+</code></pre></div><h1 id="_2-在es6中常用的for-of数组遍历方法"><a href="#_2-在es6中常用的for-of数组遍历方法" aria-hidden="true" class="header-anchor">#</a> 2. 在ES6中常用的<code>for...of</code>数组遍历方法:</h1> <p><strong>for...of</strong>:  <code>JavaScript</code>原有的<code>for...in</code>循环，只能获得对象的键名，不能直接获取键值。ES6 提供<code>for...of</code>循环，允许遍历获得键值，但是不能循环对象，一般用来循环数组。</p> <div class="language- extra-class"><pre class="language-text"><code>let arr = [1, 2, 3, 4, 5];
+for (let i in arr) {
+  console.log(i);  // 0, 1, 2, 3, 4
+}
+ 
+for (let i of arr) {
+  console.log(i);  // 1, 2, 3, 4, 5
+}
+</code></pre></div><p><strong>总结：</strong> <strong>看到这里相信你已经把基本用法和示例弄的差不多了，接下来总结一下，一般的循环用<code>for</code>,<code>for...in</code>,<code>for...of</code>和<code>forEach</code>,需要映射为新数组的用<code>map</code>，需要筛选出想要的用<code>filter</code>，数值需要进行累加的用<code>reduce</code>，如果要找一些值用<code>some</code>和<code>every</code>，并且想知道值的具体位置的可以用<code>indexOf</code>和<code>lastIndexOf</code>，接下来就是对症下药，因地制宜了，相信你会熟练掌握并准确应用了。</strong></p> <h1 id="_3-常用的一般数组循环for-for-in-for-of和foreach-map性能对比："><a href="#_3-常用的一般数组循环for-for-in-for-of和foreach-map性能对比：" aria-hidden="true" class="header-anchor">#</a> 3. 常用的一般数组循环for,for...in,for...of和forEach/map性能对比：</h1> <div class="language- extra-class"><pre class="language-text"><code>let arr = Array(100).fill(5);
+ 
+console.time(&quot;for循环&quot;);
+for(let i = 0; i &lt; arr.length; i++) {
+    arr[i] = arr[i] * 2;
+}
+console.timeEnd(&quot;for循环&quot;);  // for循环: 0.041ms
+ 
+console.time(&quot;for...in循环&quot;);
+for(let i in arr) {
+    arr[i] = arr[i] * 2;
+}
+console.timeEnd(&quot;for...in循环&quot;); // for...in循环: 0.126ms
+ 
+console.time(&quot;for...of循环&quot;);
+for(let i of arr) {
+    arr[i] = arr[i] * 2;
+}
+console.timeEnd(&quot;for...of循环&quot;);  // for...of循环: 3532.695ms
+ 
+console.time(&quot;forEach循环&quot;);
+arr.forEach((value, index, arr) =&gt; {
+    arr[index] = value * 2;
+});
+console.timeEnd(&quot;forEach循环&quot;);  // forEach循环: 0.103ms
+
+console.time(&quot;map循环&quot;);
+arr.map((value, index, arr) =&gt; {
+    arr[index] = value * 2;
+});
+console.timeEnd(&quot;map循环&quot;); //map循环: 0.086ms
+</code></pre></div><p><strong>哈哈，经过多次对比取平均值可以明显的看到<code>for</code>循环秒杀其他方法（这只是100个数，如果更多的数效果将会更明显），原来自己的方法一点都不low啊，只要在正确的场合应用正确的方法并简单有效才是最好的，以后一般的循环大家可以大胆的使用for循环啦！</strong></p> <h2 id="常用的检测数组的方法："><a href="#常用的检测数组的方法：" aria-hidden="true" class="header-anchor">#</a> 常用的检测数组的方法：</h2> <ol><li>instanceof</li> <li>Array.isArray()</li> <li>Object.prototype.toString.call()  「推荐使用这个」</li></ol></div> <div class="content page-nav"><p class="inner"><span class="prev">←
+          <a href="/blog/blog/es6-scanning.html" class="prev">ES6的语言特性</a></span> <span class="next"><a href="/blog/blog/ios-keyboard-blank.html">一文彻底解决iOS中键盘回落后留白问题</a>→
+        </span></p></div></div> <!----></div> <div class="tool-group"><!----></div></div></div> <footer class="footer"><span>如果说人生是一场旅行，而我是这场旅行的主人!</span></footer></div><div class="global-ui"><!----></div></div>
+    <script src="/blog/assets/js/app.426b1919.js" defer></script><script src="/blog/assets/js/8.723e2475.js" defer></script><script src="/blog/assets/js/3.79418191.js" defer></script><script src="/blog/assets/js/16.d48bf774.js" defer></script><script src="/blog/assets/js/19.ff47a288.js" defer></script><script src="/blog/assets/js/13.7908793c.js" defer></script><script src="/blog/assets/js/49.d8dfe89c.js" defer></script><script src="/blog/assets/js/5.da195e96.js" defer></script>
+  </body>
+</html>
